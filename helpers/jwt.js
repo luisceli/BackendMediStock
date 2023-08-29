@@ -8,7 +8,7 @@ function authJwt(){
         algorithms: ['HS256']
     }).unless({
         path: [
-            // {url:/\/api\/v1\/medicamentos(.*)/,methods:['GET','OPTIONS']},
+            {url:/\/api\/v1\/medicamentos(.*)/,methods:['GET','OPTIONS']},
             // {url:/\/api\/v1\/insumos(.*)/,methods:['GET','OPTIONS']},
             // {url:/\/api\/v1\/equipos(.*)/,methods:['GET','OPTIONS']},
             `${api}/usuarios/login`,
