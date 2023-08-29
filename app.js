@@ -4,6 +4,8 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+const PORT = process.env.PORT || 3000;
+
 app.use(cors());
 app.options('*', cors())
 require('dotenv/config');
@@ -49,4 +51,6 @@ mongoose.connect(process.env.CONNECTION_STRING)
 })*/
 
 //Production
-app.listen(process.env.PORT || 3000);
+app.listen(PORT, function () {
+    console.log('server started on PORT' + PORT);
+})
